@@ -1,16 +1,17 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "tsconfig/react-library.json",
   "compilerOptions": {
     "paths": {
       "@/*": ["*"]
     },
-    "rootDir": "src",
+    "rootDir": "./src",
     "strict": false,
     "module": "esnext",
     "jsx": "react",
     "target": "esnext",
-    "composite": true,
-    "baseUrl": "src",
+    //"composite": true,
+    "baseUrl": "./src",
     "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "build"
   },

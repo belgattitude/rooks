@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@belgattitude/common-i18n": ["../../../packages/common-i18n/src/index"]
+    },
+    "baseUrl": "./src",
+    "target": "ESNext",
+    "module": "ESNext",
+    "declarationDir": "./dist",
+    "incremental": true,
+    "tsBuildInfoFile": "./tsconfig.build.tsbuildinfo" // for tsup rollup dts tsBuildInfoFile is required when using incremental
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["dist", "**/__tests__/*"]
+}
